@@ -91,3 +91,15 @@
   border-bottom: 0.2rem solid black;
 }
 /*******tic-tac-toe END******/
+
+.container {
+  /* padding: 9% 8%; */
+  width: 100%;
+  text-align: center;
+  margin: 10% auto 0%;
+  /* position: relative; */
+}
+
+.current-marker {
+  margin-bottom: 1rem;
+}
