@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicon / Icon -->
+    <link rel="icon" href="#" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tic tac toe</title>
+  </head>
+  <body>
+    <div id="tic-tac-toe">
+      <div class="row">
+        <h1 class="span3">Tic Tac Toe</h1>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <div class="input-prepend input-append">
+            <span class="add-on win_text">O won</span
+            ><strong id="o_win" class="win_times add-on">0</strong
+            ><span class="add-on">time(s)</span>
+          </div>
+          <div class="input-prepend input-append">
+            <span class="add-on win_text">X won</span
+            ><strong id="x_win" class="win_times add-on">0</strong
+            ><span class="add-on">time(s)</span>
+          </div>
+        </div>
+        <ul class="row" id="game">
+          <li id="one" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
+          <li id="two" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
+          <li id="three" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+          <li id="four" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+          <li id="five" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+          <li id="six" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
+          <li id="seven" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+          <li id="eight" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+          <li id="nine" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+            +
+          </li>
+        </ul>
+        <div class="clr">&nbsp;</div>
+        <div class="row">
+          <a href="#" id="reset" class="btn-success btn span3">Restart</a>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
