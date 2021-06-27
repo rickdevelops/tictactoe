@@ -9,10 +9,11 @@
   padding: 0;
   list-style: none;
   text-align: center;
-  margin-bottom: 20px;
+  /* padding-bottom: 2.4rem; */
+  /* margin-bottom: 20px; */
   color: #fff;
-  height: 60px;
-  line-height: 60px;
+  height: 90px;
+  line-height: 90px;
   font-size: 40px;
   color: #ccc;
 }
@@ -39,6 +40,10 @@
   text-transform: uppercase;
   outline: none;
   width: 204px;
+}
+
+#currentMarker {
+  margin-left: 0.5rem;
 }
 .input-prepend span.pre_text {
   width: 55px;
@@ -75,5 +80,14 @@
 }
 .input-append .win_text {
   width: 52px;
+}
+.btn {
+  border-color: black;
+  border-width: 0.2rem;
+  border-radius: 0%;
+}
+#one {
+  border-right: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
 }
 /*******tic-tac-toe END******/

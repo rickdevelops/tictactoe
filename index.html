@@ -23,49 +23,61 @@
     <title>Tic tac toe</title>
   </head>
   <body>
-    <div id="tic-tac-toe">
-      <div class="row">
-        <h1 class="span3">Tic Tac Toe</h1>
-      </div>
-      <div class="row">
-        <div class="span3">
-          <div class="input-prepend input-append">
-            <span class="add-on win_text">O won</span
-            ><strong id="o_win" class="win_times add-on">0</strong
-            ><span class="add-on">time(s)</span>
-          </div>
-          <div class="input-prepend input-append">
-            <span class="add-on win_text">X won</span
-            ><strong id="x_win" class="win_times add-on">0</strong
-            ><span class="add-on">time(s)</span>
-          </div>
-        </div>
-        <ul class="row" id="game">
-          <li id="one" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
-          <li id="two" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
-          <li id="three" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-          <li id="four" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-          <li id="five" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-          <li id="six" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">+</li>
-          <li id="seven" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-          <li id="eight" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-          <li id="nine" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-            +
-          </li>
-        </ul>
-        <div class="clr">&nbsp;</div>
+    <div class="container">
+      <div id="tic-tac-toe">
         <div class="row">
-          <a href="#" id="reset" class="btn-success btn span3">Restart</a>
+          <h1>Tic Tac Toe</h1>
+        </div>
+        <div class="row">
+          <div class="span3">
+            <div class="input-prepend input-append">
+              <span class="add-on win_text">O won</span
+              ><strong id="o_win" class="win_times add-on"> 0</strong
+              ><span class="add-on"> time(s)</span>
+            </div>
+            <div class="input-prepend input-append">
+              <span class="add-on win_text">X won</span
+              ><strong id="x_win" class="win_times add-on"> 0</strong
+              ><span class="add-on"> time(s)</span>
+            </div>
+            <div class="row">
+              <span> Turn for player with Marker:</span>
+              <div id="currentMarker"></div>
+            </div>
+          </div>
+          <ul class="row" id="game">
+            <li id="one" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="two" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="three" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="four" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="five" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="six" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="seven" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="eight" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+            <li id="nine" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+              +
+            </li>
+          </ul>
+          <div class="clr">&nbsp;</div>
+          <div class="row">
+            <a href="#" id="reset" class="btn-success btn span3">Restart</a>
+          </div>
         </div>
       </div>
     </div>

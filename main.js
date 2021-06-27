@@ -6,6 +6,11 @@ $(document).ready(function () {
   var o_win = 0;
   var x_win = 0;
   $("#game li").click(function () {
+    if (count % 2 == 0) {
+      $("#currentMarker").html("X");
+    } else {
+      $("#currentMarker").html("O");
+    }
     if (
       ($("#one").hasClass("o") &&
         $("#two").hasClass("o") &&
