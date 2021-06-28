@@ -75,14 +75,14 @@
   margin: 0 auto;
 }
 .input-append .win_times {
-  background: #fff;
+  /* background: #fff; */
   width: 101px;
 }
 .input-append .win_text {
   width: 52px;
 }
 .btn {
-  border-color: black;
+  /* border-color: black; */
   border-width: 0.2rem;
   border-radius: 0%;
 }
@@ -90,15 +90,51 @@
   border-right: 0.2rem solid black;
   border-bottom: 0.2rem solid black;
 }
+#two {
+  border-right: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+  border-left: 0.2rem solid black;
+}
+#three {
+  border-left: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+}
+#four {
+  border-right: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+}
+#five {
+  border: 0.2rem solid black;
+}
+#six {
+  border-left: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+}
+#seven {
+  border-right: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+}
+#eight {
+  border-right: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+  border-left: 0.2rem solid black;
+}
+#nine {
+  border-left: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+}
+
 /*******tic-tac-toe END******/
 
 .container {
   /* padding: 9% 8%; */
   width: 100%;
   text-align: center;
-  margin: 10% 7% 0%;
+  margin: 7% 7% 0%;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +172,8 @@
 .congrats-container {
   width: 100vw;
   height: 100vh;
-  background: #fff;
+  padding: 10% 7% 0%;
+  /* background: #fff; */
   border: 1px solid white;
   display: fixed;
   top: 0px;
@@ -164,4 +201,9 @@
 }
 .confetti--animation-fast {
   animation: confetti-fast 1.25s linear 1 forwards;
+}
+
+body{
+  /* background-color: #6a11cb; */
+  background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%) !important; 
 }
