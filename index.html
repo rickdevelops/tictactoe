@@ -23,64 +23,71 @@
     <title>Tic-tac-toe</title>
   </head>
   <body>
-  <div class="js-container" style="top:0px !important;"></div>
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <h1>Tic Tac Toe</h1>
-      </div>
-      <div id="tic-tac-toe">
-        <div class="d-flex justify-content-center">
-          <div class="input-prepend input-append">
-            <span class="add-on win_text">O won</span
-            ><strong id="o_win" class="win_times add-on"> 0</strong
-            ><span class="add-on"> time(s)</span>
+    <div class="js-container" style="top: 0px !important"></div>
+    <div class="d-flex justify-content-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <h1>Tic Tac Toe</h1>
+        </div>
+        <div id="tic-tac-toe">
+          <div class="d-flex justify-content-center">
+            <div class="input-prepend input-append">
+              <span class="add-on win_text">O won</span
+              ><strong id="o_win" class="win_times add-on"> 0</strong
+              ><span class="add-on"> time(s)</span>
+            </div>
           </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div class="input-prepend input-append">
-            <span class="add-on win_text">X won</span
-            ><strong id="x_win" class="win_times add-on"> 0</strong
-            ><span class="add-on"> time(s)</span>
+          <div class="d-flex justify-content-center">
+            <div class="input-prepend input-append">
+              <span class="add-on win_text">X won</span
+              ><strong id="x_win" class="win_times add-on"> 0</strong
+              ><span class="add-on"> time(s)</span>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <span> Turn for player with Marker:</span>
-          <div id="currentMarker"></div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <ul class="row" id="game">
-            <li id="one" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="two" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="three" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="four" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="five" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="six" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="seven" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="eight" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-            <li id="nine" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
-              +
-            </li>
-          </ul>
-        </div>
-        <div class="clr">&nbsp;</div>
-        <div class="d-flex justify-content-center">
-          <a href="#" id="reset" class="btn-success btn span3">Restart</a>
+          <div class="row" style="margin-bottom: 1rem">
+            <span> Turn for player with Marker:</span>
+            <div id="currentMarker"></div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <ul class="row" id="game">
+              <li id="one" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="two" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="three" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="four" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="five" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="six" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="seven" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="eight" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+              <li id="nine" class="col-4 col-sm-4 col-md-4 col-lg-4 btn span1">
+                +
+              </li>
+            </ul>
+          </div>
+          <div class="clr">&nbsp;</div>
+          <div class="d-flex justify-content-center">
+            <a href="#" id="reset" class="btn-success btn span3">Restart</a>
+          </div>
+          <!-- <div class="d-flex justify-content-center">
+            <a href="#" id="reset-everything" class="btn-success btn span3"
+              >Restart All</a
+            >
+          </div> -->
         </div>
       </div>
     </div>

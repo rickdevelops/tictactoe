@@ -37,8 +37,8 @@ $(document).ready(function () {
         $("#five").hasClass("o") &&
         $("#seven").hasClass("o"))
     ) {
-    $(".js-container").removeClass("congrats-container");
-    alert("O has won the game. Start a new game");
+      $(".js-container").removeClass("congrats-container");
+      alert("O has won the game. Start a new game");
       $("#game li").text("+");
       $("#game li").removeClass("disable");
       $("#game li").removeClass("o");
@@ -71,8 +71,8 @@ $(document).ready(function () {
         $("#five").hasClass("x") &&
         $("#seven").hasClass("x"))
     ) {
-    $(".js-container").removeClass("congrats-container");
-    alert("X wins has won the game. Start a new game");
+      $(".js-container").removeClass("congrats-container");
+      alert("X wins has won the game. Start a new game");
       $("#game li").text("+");
       $("#game li").removeClass("disable");
       $("#game li").removeClass("o");
@@ -120,10 +120,11 @@ $(document).ready(function () {
           $("#five").hasClass("o") &&
           $("#seven").hasClass("o"))
       ) {
-    $(".js-container").addClass("congrats-container");
-    alert("O wins");
+        $(".js-container").addClass("congrats-container");
+        alert("O wins");
         count = 0;
         o_win++;
+        // localStorage.setItem("o_win", o_win);
         $("#o_win").text(o_win);
       }
     } else {
@@ -156,10 +157,11 @@ $(document).ready(function () {
           $("#five").hasClass("x") &&
           $("#seven").hasClass("x"))
       ) {
-    $(".js-container").addClass("congrats-container");
-    alert("X wins");
+        $(".js-container").addClass("congrats-container");
+        alert("X wins");
         count = 0;
         x_win++;
+        // localStorage.setItem("x_win", x_win);
         $("#x_win").text(x_win);
       }
     }
@@ -184,58 +186,77 @@ $(document).ready(function () {
   //   $("#game li").removeClass("btn-info");
   //   count = 0;
   // }
+  $("#reset-everything").click(function () {
+    // localStorage.removeItem("o_win");
+    // localStorage.removeItem("x_win");
+    $("#game li").text("+");
+    $(".js-container").removeClass("congrats-container");
+    $("#game li").removeClass("disable");
+    $("#game li").removeClass("o");
+    $("#game li").removeClass("x");
+    $("#game li").removeClass("btn-primary");
+    $("#game li").removeClass("btn-info");
+    count = 0;
+  });
 });
 
 // congrats animation
-const Confettiful = function(el) {
+const Confettiful = function (el) {
   this.el = el;
   this.containerEl = null;
-  
+
   this.confettiFrequency = 3;
-  this.confettiColors = ['#EF2964', '#00C09D', '#2D87B0', '#48485E','#EFFF1D'];
-  this.confettiAnimations = ['slow', 'medium', 'fast'];
-  
+  this.confettiColors = ["#EF2964", "#00C09D", "#2D87B0", "#48485E", "#EFFF1D"];
+  this.confettiAnimations = ["slow", "medium", "fast"];
+
   this._setupElements();
   this._renderConfetti();
 };
 
-Confettiful.prototype._setupElements = function() {
-  const containerEl = document.createElement('div');
+Confettiful.prototype._setupElements = function () {
+  const containerEl = document.createElement("div");
   const elPosition = this.el.style.position;
-  
-  if (elPosition !== 'relative' || elPosition !== 'absolute') {
-    this.el.style.position = 'relative';
+
+  if (elPosition !== "relative" || elPosition !== "absolute") {
+    this.el.style.position = "relative";
   }
-  
-  containerEl.classList.add('confetti-container');
-  
+
+  containerEl.classList.add("confetti-container");
+
   this.el.appendChild(containerEl);
-  
+
   this.containerEl = containerEl;
 };
 
-Confettiful.prototype._renderConfetti = function() {
+Confettiful.prototype._renderConfetti = function () {
   this.confettiInterval = setInterval(() => {
-    const confettiEl = document.createElement('div');
-    const confettiSize = (Math.floor(Math.random() * 3) + 7) + 'px';
-    const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
-    const confettiLeft = (Math.floor(Math.random() * this.el.offsetWidth)) + 'px';
-    const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
-    
-    confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+    const confettiEl = document.createElement("div");
+    const confettiSize = Math.floor(Math.random() * 3) + 7 + "px";
+    const confettiBackground =
+      this.confettiColors[
+        Math.floor(Math.random() * this.confettiColors.length)
+      ];
+    const confettiLeft = Math.floor(Math.random() * this.el.offsetWidth) + "px";
+    const confettiAnimation =
+      this.confettiAnimations[
+        Math.floor(Math.random() * this.confettiAnimations.length)
+      ];
+
+    confettiEl.classList.add(
+      "confetti",
+      "confetti--animation-" + confettiAnimation
+    );
     confettiEl.style.left = confettiLeft;
     confettiEl.style.width = confettiSize;
     confettiEl.style.height = confettiSize;
     confettiEl.style.backgroundColor = confettiBackground;
-    
-    confettiEl.removeTimeout = setTimeout(function() {
+
+    confettiEl.removeTimeout = setTimeout(function () {
       confettiEl.parentNode.removeChild(confettiEl);
     }, 3000);
-    
+
     this.containerEl.appendChild(confettiEl);
   }, 25);
 };
 
-window.confettiful = new Confettiful(document.querySelector('.js-container'));
-
-
+window.confettiful = new Confettiful(document.querySelector(".js-container"));

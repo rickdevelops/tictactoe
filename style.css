@@ -129,15 +129,11 @@
 /*******tic-tac-toe END******/
 
 .container {
-  /* padding: 9% 8%; */
-  width: 100%;
-  text-align: center;
-  margin: 7% 7% 0%;
-  width: 100%;
-  /* height: 100%; */
+  padding: 8% 0 0 0;
+  /* display: table; */
+  margin: auto;
   position: absolute;
   top: 0;
-  left: 0;
   /* position: relative; */
 }
 
@@ -148,26 +144,26 @@
 @keyframes confetti-slow {
   0% {
     transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
- }
+  }
   100% {
     transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
- }
+  }
 }
 @keyframes confetti-medium {
   0% {
     transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
- }
+  }
   100% {
     transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
- }
+  }
 }
 @keyframes confetti-fast {
   0% {
     transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
- }
+  }
   100% {
     transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
- }
+  }
 }
 .congrats-container {
   width: 100vw;
@@ -203,7 +199,6 @@
   animation: confetti-fast 1.25s linear 1 forwards;
 }
 
-body{
-  /* background-color: #6a11cb; */
-  background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%) !important; 
+body {
+  background-color: #d3ced8;
 }
