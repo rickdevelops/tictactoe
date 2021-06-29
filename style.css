@@ -202,3 +202,6 @@
 body {
   background-color: #d3ced8;
 }
+#reset, #reset-everything{
+  border-radius: 10%;
+}
