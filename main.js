@@ -170,7 +170,9 @@ $(document).ready(function () {
           $("#seven").hasClass("o"))
       ) {
         $(".js-container").addClass("congrats-container");
-        alert("O wins");
+        // alert("O wins");
+        modal.style.display = "block";
+        $(".modal-text").text("O wins");
         count = 0;
         o_win++;
         localStorage.setItem("o_win", o_win);
@@ -209,7 +211,9 @@ $(document).ready(function () {
           $("#seven").hasClass("x"))
       ) {
         $(".js-container").addClass("congrats-container");
-        alert("X wins");
+        // alert("X wins");
+        modal.style.display = "block";
+        $(".modal-text").text("X wins");
         count = 0;
         x_win++;
         localStorage.setItem("x_win", x_win);
@@ -248,6 +252,33 @@ $(document).ready(function () {
     $("#x_win").text(x_win);
   });
 });
+
+// modal
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 // congrats animation
 const Confettiful = function (el) {
