@@ -4,15 +4,11 @@ $(document).ready(function () {
   var o = "o";
   var count = 0;
   var o_win = 0;
-  if (
-    localStorage.getItem("o_win")
-  ) {
+  if (localStorage.getItem("o_win")) {
     o_win = localStorage.getItem("o_win");
   }
   var x_win = 0;
-  if (
-    localStorage.getItem("x_win")
-  ) {
+  if (localStorage.getItem("x_win")) {
     x_win = localStorage.getItem("x_win");
   }
   $("#o_win").text(o_win);
@@ -53,7 +49,9 @@ $(document).ready(function () {
     ) {
       $(".js-container").removeClass("congrats-container");
       localStorage.setItem("o_win", o_win);
-      alert("O has won the game. Start a new game");
+      // alert("O has won the game. Start a new game");
+      modal.style.display = "block";
+      $(".modal-text").text("O has won the game. Start a new game");
       $("#game li").text("+");
       $("#game li").removeClass("disable");
       $("#game li").removeClass("o");
@@ -90,7 +88,9 @@ $(document).ready(function () {
     ) {
       localStorage.setItem("x_win", x_win);
       $(".js-container").removeClass("congrats-container");
-      alert("X wins has won the game. Start a new game");
+      // alert("X wins has won the game. Start a new game");
+      modal.style.display = "block";
+      $(".modal-text").text("X wins has won the game. Start a new game");
       $("#game li").text("+");
       $("#game li").removeClass("disable");
       $("#game li").removeClass("o");
@@ -99,46 +99,36 @@ $(document).ready(function () {
       $("#game li").removeClass("btn-info");
     }
     // Tie game
-    else if (count == 8 ){
-      if (count%2==0) 
-      {
+    else if (count == 8) {
+      if (count % 2 == 0) {
         $(this).text(o);
-      $(this).addClass("disable o btn-info");
-      }
-      else 
-      {
+        $(this).addClass("disable o btn-info");
+      } else {
         $(this).text(x);
-      $(this).addClass("disable x btn-info");
+        $(this).addClass("disable x btn-info");
       }
-      if((
-      (($("#one").hasClass("o") ||
-      $("#one").hasClass("x")) &&
-      ($("#two").hasClass("o") ||
-      $("#two").hasClass("x")) &&
-      ($("#three").hasClass("o") ||
-      $("#three").hasClass("x")) &&
-      ($("#four").hasClass("o") ||
-      $("#four").hasClass("x")) &&
-      ($("#five").hasClass("o") ||
-      $("#five").hasClass("x")) &&
-      ($("#six").hasClass("o") ||
-      $("#six").hasClass("x")) &&
-      ($("#seven").hasClass("o") ||
-      $("#seven").hasClass("x")) &&
-        ($("#eight").hasClass("o") ||
-      $("#eight").hasClass("x")) &&
-      ($("#nine").hasClass("o") ||
-      $("#nine").hasClass("x"))
-      ))) {
-      alert("Its a tie. It will restart.");
-      resetBoard();
+      if (
+        ($("#one").hasClass("o") || $("#one").hasClass("x")) &&
+        ($("#two").hasClass("o") || $("#two").hasClass("x")) &&
+        ($("#three").hasClass("o") || $("#three").hasClass("x")) &&
+        ($("#four").hasClass("o") || $("#four").hasClass("x")) &&
+        ($("#five").hasClass("o") || $("#five").hasClass("x")) &&
+        ($("#six").hasClass("o") || $("#six").hasClass("x")) &&
+        ($("#seven").hasClass("o") || $("#seven").hasClass("x")) &&
+        ($("#eight").hasClass("o") || $("#eight").hasClass("x")) &&
+        ($("#nine").hasClass("o") || $("#nine").hasClass("x"))
+      ) {
+        // alert("Its a tie. It will restart.");
+        modal.style.display = "block";
+        $(".modal-text").text("Its a tie. It will restart.");
+        resetBoard();
+      }
     }
-  }
     // Already Selected
     else if ($(this).hasClass("disable")) {
-      alert("Already selected");
-    }
-    else if (count % 2 == 0) {
+      // alert("Already selected");
+      $(".modal-text").text("Already selected.");
+    } else if (count % 2 == 0) {
       count++;
       $(this).text(o);
       $(this).addClass("disable o btn-primary");
@@ -178,8 +168,7 @@ $(document).ready(function () {
         localStorage.setItem("o_win", o_win);
         $("#o_win").text(o_win);
       }
-    }
-    else  {
+    } else {
       count++;
       $(this).text(x);
       $(this).addClass("disable x btn-info");
@@ -221,11 +210,10 @@ $(document).ready(function () {
       }
     }
   });
-  $("#reset").click(
-    function () { resetBoard();
-  }
-  );
-  function resetBoard(){
+  $("#reset").click(function () {
+    resetBoard();
+  });
+  function resetBoard() {
     $(".js-container").removeClass("congrats-container");
     $("#game li").text("+");
     $("#game li").removeClass("disable");
@@ -263,22 +251,22 @@ var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 // btn.onclick = function() {
 //   modal.style.display = "block";
 // }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 // congrats animation
 const Confettiful = function (el) {
@@ -314,12 +302,12 @@ Confettiful.prototype._renderConfetti = function () {
     const confettiSize = Math.floor(Math.random() * 3) + 7 + "px";
     const confettiBackground =
       this.confettiColors[
-      Math.floor(Math.random() * this.confettiColors.length)
+        Math.floor(Math.random() * this.confettiColors.length)
       ];
     const confettiLeft = Math.floor(Math.random() * this.el.offsetWidth) + "px";
     const confettiAnimation =
       this.confettiAnimations[
-      Math.floor(Math.random() * this.confettiAnimations.length)
+        Math.floor(Math.random() * this.confettiAnimations.length)
       ];
 
     confettiEl.classList.add(
