@@ -13,6 +13,8 @@ $(document).ready(function () {
   }
   $("#o_win").text(o_win);
   $("#x_win").text(x_win);
+  $("#o_win_ver").text(o_win);
+  $("#x_win_ver").text(x_win);
   $("#game li").click(function () {
     // console.log(count);
     if ($(this).hasClass("disable")) {
@@ -62,6 +64,7 @@ $(document).ready(function () {
         if ($("#playWithPCCheck").is(":checked")) {
           o_win++;
           $("#o_win").text(o_win);
+          $("#o_win_ver").text(o_win);
           $(".js-container").addClass("congrats-container");
           count = 0;
         }
@@ -191,7 +194,7 @@ $(document).ready(function () {
           o_win++;
           localStorage.setItem("o_win", o_win);
           $("#o_win").text(o_win);
-        }
+        } $("#o_win_ver").text(o_win);
       } else {
         count++;
         $(this).text(x);
@@ -328,6 +331,8 @@ $(document).ready(function () {
     x_win = 0;
     $("#o_win").text(o_win);
     $("#x_win").text(x_win);
+    $("#o_win_ver").text(o_win);
+    $("#x_win_ver").text(x_win);
   }
 
   // modal

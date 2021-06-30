@@ -30,7 +30,7 @@
           <h1>Tic Tac Toe</h1>
         </div>
         <div id="tic-tac-toe">
-          <div
+          <!-- <div
             class="
               left-content-inner
               d-flex
@@ -38,18 +38,18 @@
               flex-column
               h-100
             "
-          >
-            <div class="vertical-menu">
-              <div class="col-md-6"></div>
-              <p class="mar-bottom">X</p>
+          > -->
+            <div class="vertical-menu-left d-none d-sm-none d-md-block">
+              
+              <p class="mar-bottom" style="margin-top: 2rem;">O</p>
               <br />
               <p class="remove-mp">W</p>
               <p class="remove-mp">O</p>
               <p style="margin-bottom: 2rem; padding: 0%">N</p>
               <strong
-                id="x_win"
+                id="o_win_ver"
                 class="win_times add-on"
-                style="margin-bottom: 2rem"
+                style="margin-bottom: 1rem"
               >
                 0</strong
               >
@@ -60,21 +60,48 @@
               <p class="remove-mp">E</p>
               <p class="remove-mp">(s)</p>
             </div>
+          <!-- </div> -->
+
+          <!-- Right Bar -->
+          <div class="vertical-menu-right d-none d-sm-none d-md-block">
+              
+            <p class="mar-bottom" style="margin-top: 2rem;">X</p>
+            <br />
+            <p class="remove-mp">W</p>
+            <p class="remove-mp">O</p>
+            <p style="margin-bottom: 2rem; padding: 0%">N</p>
+            <strong
+              id="x_win_ver"
+              class="win_times add-on"
+              style="margin-bottom: 1rem"
+            >
+              0</strong
+            >
+            <br />
+            <p class="remove-mp">T</p>
+            <p class="remove-mp">I</p>
+            <p class="remove-mp">M</p>
+            <p class="remove-mp">E</p>
+            <p class="remove-mp">(s)</p>
           </div>
-          <div class="d-flex justify-content-center">
-            <div class="input-prepend input-append">
+          <div class="d-flex justify-content-around d-block d-sm-block d-md-none">
+            <!-- <div class="input-prepend input-append"> -->
               <span class="add-on win_text">O won</span
-              ><strong id="o_win" class="win_times add-on"> 0</strong
-              ><span class="add-on"> time(s)</span>
-            </div>
+              ><strong
+              id="o_win"
+              class="win_times add-on"
+            >
+              0</strong
+            ><span class="add-on"> time(s)</span>
+            <!-- </div> -->
           </div>
-          <!-- <div class="d-flex justify-content-center">
-            <div class="input-prepend input-append">
+          <div class="d-flex justify-content-around d-block d-sm-block d-md-none">
+            <!-- <div class="input-prepend input-append"> -->
               <span class="add-on win_text">X won</span
               ><strong id="x_win" class="win_times add-on"> 0</strong
               ><span class="add-on"> time(s)</span>
-            </div>
-          </div> -->
+            <!-- </div> -->
+          </div>
           <div class="d-flex justify-content-center">
             <label for="playWithPCCheck">PLAY WITH COMPUTER :</label>
             <input type="checkbox" id="playWithPCCheck" />

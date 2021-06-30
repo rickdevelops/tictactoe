@@ -267,21 +267,28 @@ body {
   cursor: pointer;
 }
 
-.vertical-menu {
+.vertical-menu-left,
+.vertical-menu-right {
   width: 3rem; /* Set a width if you like */
   position: absolute;
-  left: 0;
-  height: 50%;
+  height: 32rem;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
   /* writing-mode: vertical-rl; */
   text-transform: uppercase;
-  padding-bottom: 8rem;
+  /* padding-bottom: 12rem; */
   border: 0.15rem solid black;
 }
+.vertical-menu-left{
+left: 0;
+}
+.vertical-menu-right{
+  right:0;
+}
 
-.vertical-menu p,
+.vertical-menu-left p,
+.vertical-menu-right p,
 strong {
   display: flex;
   justify-content: space-around;
@@ -304,12 +311,14 @@ strong {
   color: white;
 }
 
-.vertical-menu .mar-bottom {
+.vertical-menu-left .mar-bottom,
+.vertical-menu-right .mar-bottom {
   margin-bottom: 2rem;
   padding: 0%;
 }
 
-.vertical-menu .remove-mp {
+.vertical-menu-left .remove-mp
+.vertical-menu-right .remove-mp {
   margin-bottom: 0;
   padding: 0%;
 }
