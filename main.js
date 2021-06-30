@@ -20,7 +20,7 @@ $(document).ready(function () {
       $(".modal-text").text("Already selected.");
     } else {
       if ($("#playWithPCCheck").is(":checked") && count < 8) {
-        console.log("playing", count);
+        // console.log("playing", count);
         $(this).text(o);
         $(this).addClass("disable o btn-info");
         playWithPC(count);
@@ -278,7 +278,7 @@ $(document).ready(function () {
       ) {
         randomNumber = getRandomInt(0, 8);
       }
-      console.log(randomNumber, count);
+      // console.log(randomNumber, count);
       $(allIds[randomNumber]).text(x);
       $(allIds[randomNumber]).addClass("disable x btn-info");
     }
