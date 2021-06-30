@@ -28,9 +28,9 @@ $(document).ready(function () {
       count=count+2;
     }
     if (count % 2 == 0) {
-      $("#currentMarker").html("X");
-    } else {
       $("#currentMarker").html("O");
+    } else {
+      $("#currentMarker").html("X");
     }
     // O won the game
     if (
@@ -59,11 +59,12 @@ $(document).ready(function () {
         $("#five").hasClass("o") &&
         $("#seven").hasClass("o"))
     ) {
-      $(".js-container").removeClass("congrats-container");
+      // $(".js-container").removeClass("congrats-container");
       if ($("#playWithPCCheck").is(':checked')){
         o_win++;
         $("#o_win").text(o_win);
-        count = 0;
+      $(".js-container").addClass("congrats-container");
+      count = 0;
       }
       localStorage.setItem("o_win", o_win);
       // alert("O has won the game. Start a new game");
@@ -75,6 +76,7 @@ $(document).ready(function () {
       $("#game li").removeClass("x");
       $("#game li").removeClass("btn-primary");
       $("#game li").removeClass("btn-info");
+      // $(".js-container").removeClass("congrats-container");
     }
     // X won the game
     else if (
@@ -106,10 +108,11 @@ $(document).ready(function () {
       if ($("#playWithPCCheck").is(':checked')){
         x_win++;
         $("#x_win").text(x_win);
-        count = 0;
+      $(".js-container").addClass("congrats-container");
+      count = 0;
       }
       localStorage.setItem("x_win", x_win);
-      $(".js-container").removeClass("congrats-container");
+      // $(".js-container").removeClass("congrats-container");
       // alert("X wins has won the game. Start a new game");
       modal.style.display = "block";
       $(".modal-text").text("X wins has won the game. Start a new game");
@@ -333,13 +336,15 @@ $(document).ready(function () {
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = "none";
+    $(".js-container").removeClass("congrats-container");
   };
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
-    }
+    $(".js-container").removeClass("congrats-container");
+  }
   };
 
   // congrats animation
