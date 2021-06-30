@@ -15,12 +15,17 @@ $(document).ready(function () {
   $("#x_win").text(x_win);
   $("#game li").click(function () {
     // console.log(count);
+    if ($(this).hasClass("disable")) {
+      // alert("Already selected");
+      $(".modal-text").text("Already selected.");
+    }
+    else {
     if ($("#playWithPCCheck").is(':checked')&& count<8) {
-      // console.log("playing");
+      console.log("playing",count);
       $(this).text(o);
       $(this).addClass("disable o btn-info");
       playWithPC(count);
-      count++;
+      count=count+2;
     }
     if (count % 2 == 0) {
       $("#currentMarker").html("X");
@@ -57,6 +62,8 @@ $(document).ready(function () {
       $(".js-container").removeClass("congrats-container");
       if ($("#playWithPCCheck").is(':checked')){
         o_win++;
+        $("#o_win").text(o_win);
+        count = 0;
       }
       localStorage.setItem("o_win", o_win);
       // alert("O has won the game. Start a new game");
@@ -98,6 +105,8 @@ $(document).ready(function () {
     ) {
       if ($("#playWithPCCheck").is(':checked')){
         x_win++;
+        $("#x_win").text(x_win);
+        count = 0;
       }
       localStorage.setItem("x_win", x_win);
       $(".js-container").removeClass("congrats-container");
@@ -221,7 +230,7 @@ $(document).ready(function () {
         localStorage.setItem("x_win", x_win);
         $("#x_win").text(x_win);
       }
-    }
+    }}
   });
   $("#playWithPCCheck").click(function () {
     checkboxPlayWithPC();
@@ -248,10 +257,10 @@ $(document).ready(function () {
     // }
     if (document.querySelector("#playWithPCCheck").checked && count < 8) {
       // console.log(getRandomInt(0, 10));
-      while (($(allIds[randomNumber]).hasClass("disable o btn-info") || $(allIds[randomNumber]).hasClass("disable x btn-info"))) {
+      while ((($(allIds[randomNumber]).hasClass("disable o btn-info")) || ($(allIds[randomNumber]).hasClass("disable x btn-info")))) {
         randomNumber = getRandomInt(0, 8);
       }
-      console.log(randomNumber);
+      console.log(randomNumber,count);
       $(allIds[randomNumber]).text(x);
       $(allIds[randomNumber]).addClass("disable x btn-info");
     }
