@@ -280,6 +280,7 @@ body {
   text-transform: uppercase;
   /* padding-bottom: 12rem; */
   border: 0.15rem solid black;
+  background-color: #000;
 }
 .vertical-menu-left {
   left: 0;
@@ -290,9 +291,24 @@ body {
 
 .vertical-menu-left p,
 .vertical-menu-right p,
-strong {
+.vertical-menu-left strong,
+.vertical-menu-right strong {
   display: flex;
   justify-content: space-around;
+}
+
+.vertical-menu-left p,
+.vertical-menu-right p {
+  font-size: 1rem;
+  font-weight: 1000;
+  color: #888;
+}
+
+.vertical-menu-left strong,
+.vertical-menu-right strong {
+  font-weight: 1000;
+  color: #eee;
+  font-size: 30px;
 }
 
 .vertical-menu a {
