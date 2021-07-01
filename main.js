@@ -110,6 +110,7 @@ $(document).ready(function () {
         if ($("#playWithPCCheck").is(":checked")) {
           x_win++;
           $("#x_win").text(x_win);
+          $("#x_win_ver").text(x_win);
           $(".js-container").addClass("congrats-container");
           count = 0;
         }
@@ -194,7 +195,8 @@ $(document).ready(function () {
           o_win++;
           localStorage.setItem("o_win", o_win);
           $("#o_win").text(o_win);
-        } $("#o_win_ver").text(o_win);
+        }
+        $("#o_win_ver").text(o_win);
       } else {
         count++;
         $(this).text(x);
@@ -235,6 +237,7 @@ $(document).ready(function () {
           localStorage.setItem("x_win", x_win);
           $("#x_win").text(x_win);
         }
+        $("#x_win_ver").text(x_win);
       }
     }
   });

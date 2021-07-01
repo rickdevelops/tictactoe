@@ -31,6 +31,7 @@
   float: left;
   padding: 0;
   clear: both;
+  margin: 2rem 0 3rem 0;
 }
 .new_span {
   width: 226px;
@@ -280,11 +281,11 @@ body {
   /* padding-bottom: 12rem; */
   border: 0.15rem solid black;
 }
-.vertical-menu-left{
-left: 0;
+.vertical-menu-left {
+  left: 0;
 }
-.vertical-menu-right{
-  right:0;
+.vertical-menu-right {
+  right: 0;
 }
 
 .vertical-menu-left p,
@@ -317,8 +318,7 @@ strong {
   padding: 0%;
 }
 
-.vertical-menu-left .remove-mp
-.vertical-menu-right .remove-mp {
+.vertical-menu-left .remove-mp .vertical-menu-right .remove-mp {
   margin-bottom: 0;
   padding: 0%;
 }
