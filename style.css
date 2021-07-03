@@ -151,7 +151,7 @@
 /*******tic-tac-toe END******/
 
 .container {
-  padding: 8% 0 0 0;
+  padding: 2% 0 0 0;
   /* display: table; */
   margin: auto;
   position: absolute;
@@ -222,7 +222,7 @@
 }
 
 body {
-  background-color: #d3ced8;
+  background-color: #7b7b7b;
 }
 #reset,
 #reset-everything {

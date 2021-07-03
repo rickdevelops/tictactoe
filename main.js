@@ -28,10 +28,13 @@ $(document).ready(function () {
         playWithPC(count);
         count = count + 2;
       }
-      if (count % 2 == 0) {
-        $("#currentMarker").html("O");
-      } else {
+      if (count % 2 == 0 && !$("#playWithPCCheck").is(":checked")) {
         $("#currentMarker").html("X");
+      } else {
+        $("#currentMarker").html("O");
+      }
+      if ($("#playWithPCCheck").is(":checked")) {
+        $("#currentMarker").html("O");
       }
       // O won the game
       if (
