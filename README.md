@@ -4,7 +4,8 @@ visit
 https://rickdevelops.github.io/tictactoe/
 
 html, css and javascript based tictactoe page.
-Self playable game, it counts the winner's count until you refresh the page.
+You can play it by yourself, with friends or with the Computer (Based on Random Technique).
+It keeps tracks about the winner of the game and decides the winner when you reset the game.
 
 Enjoy!
 Happy Coding!
