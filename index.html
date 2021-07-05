@@ -171,11 +171,10 @@
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         setTimeout(() => {
-          document.querySelector(".main-content").style.display = "block";
-          document.querySelector(".main-content").classList.add("loaded");
+          document.querySelector(".main-content").style.opacity = "1";
           document.querySelector(".loading-screen").style.height = "0";
           document.querySelector(".loading-screen").style.opacity = "0";
-        }, 500);
+        }, 1000);
       });
     </script>
     <script
